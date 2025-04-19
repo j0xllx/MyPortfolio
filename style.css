@@ -250,7 +250,7 @@ section {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     width: 100%;
     max-width: 750px;
-    height: 340px;
+    height: 350px;
     margin-inline: auto;
   }
   
@@ -563,7 +563,7 @@ footer {
     }
     
     .nav-links li a i {
-      font-size: 20px;
+      font-size: 15px;
       margin: 0;
       color: inherit; /* Inherit the text color */
     }
@@ -575,7 +575,7 @@ footer {
     }
     
     .nav-links {
-      gap: 12px;
+      gap: 3px;
     }
 
     .journey {
