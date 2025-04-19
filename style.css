@@ -146,21 +146,21 @@ footer {
     header .container {
         flex-direction: column; /* Stack the logo above nav on small screens */
         align-items: space-between; /* Align items to the left */
-        padding: 10px 20px;
+        padding: 5px 10px;
     }
 
     /* Make the nav items smaller and keep them in one row */
     .nav-links {
         flex-direction: row; /* Keep navigation items in a single row */
-        gap: 10px;
-        margin-top: 10px;
+        gap: 5px;
+        margin-top: 5px;
         width: 100%;
         justify-content: space-between; /* Align items to the left */
     }
 
     .nav-links li a {
         font-size: 14px; /* Smaller font size for mobile */
-        padding: 8px 15px;
+        padding: 6px 13px;
     }
 
     /* Adjust the logo size and spacing */
