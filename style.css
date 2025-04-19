@@ -182,19 +182,90 @@ section {
   }
   
   .journey {
-    margin-top: 30px;
+    margin-top: 20px;
+    padding: 10px 5px; /* Reduced padding top and bottom */
+    background: #f6f3fa;
+    text-align: center;
+    border-radius: 20px; 
   }
   
   .journey h3 {
     font-size: 24px;
-    color: #556c85;
-    margin-bottom: 10px;
+    color: #2b0e24;
+    margin: 10px 0 20px; /* top: 10px, bottom: 20px */
+    font-weight: bold;
   }
   
-  .journey p {
-    font-size: 15px;
+  .vertical-timeline {
+    position: relative;
+    max-width: 700px;
+    margin: auto;
+    padding: 10px 0;
+  }
+  
+  .vertical-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 3px;
+    background: #c7b4dd;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-block {
+    position: relative;
+    padding: 25px 10px;
+    text-align: center;
+  }
+  
+  .timeline-icon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 38px;
+    height: 38px;
+    background: #fff;
+    border: 2px solid #6d4d90;
+    color: #6d4d90;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    z-index: 2;
+  }
+  
+  .timeline-box {
+    margin-top: 25px;
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+    display: inline-block;
+    max-width: 500px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+  }
+  
+  .timeline-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
+  }
+  
+  .timeline-box h4 {
+    font-size: 18px;
+    color: #6d4d90;
+    margin-bottom: 6px;
+  }
+  
+  .timeline-box p {
+    font-size: 14px;
     color: #555;
-    line-height: 1.7;
+    line-height: 1.5;
   }
   
   /* Projects Section */
@@ -463,7 +534,25 @@ footer {
         font-size: 13px;
         margin-top: 8px;
       }
-      
+     
+      .vertical-timeline::before {
+        left: 20px;
+      }
+    
+      .timeline-icon {
+        left: 20px;
+        transform: none;
+      }
+    
+      .timeline-box {
+        margin-left: 50px;
+        text-align: left;
+        padding: 12px 16px;
+      }
+    
+      .timeline-box h4 {
+        font-size: 16px;
+      }
     .about-container {
       flex-direction: column;
       align-items: center;
