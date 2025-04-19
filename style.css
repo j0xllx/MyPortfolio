@@ -38,10 +38,6 @@ header .container {
     border: #000306;
     border-width: 5px;
 }
-.port {
-  color: white;
-  font-size: 30px;
-}
 .J{
   color: white;
   font-size: 45px;
@@ -65,11 +61,6 @@ header .container {
   color:#681755;
 }
 
-.folio {
-  color: #681755; /* or any dark color */
-  font-size: 30px;
-  font-family: fantasy;
-}
 .typing-text {
   font-size: 30px;
   color: #1b041a;
@@ -522,26 +513,15 @@ footer {
       flex-direction: column;
       align-items: center;
     }
-    .port {
-      color: white;
-      font-size: 20px;
-    }
     .J{
       color: white;
-      font-size: 35px;
+      font-size: 20px;
     }
     .G{
       color: #681755;
-      font-size: 35px;
-    }
-    
-    .folio {
-      color: #681755; /* or any dark color */
       font-size: 20px;
-      font-family: fantasy;
     }
-    
-  
+
     .nav-links {
       flex-direction: row;
       gap: 3px;
