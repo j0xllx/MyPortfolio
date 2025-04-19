@@ -142,30 +142,28 @@ footer {
 
 /* Mobile View (max-width: 768px) */
 @media (max-width: 768px) {
-    /* Stack the logo and nav vertically */
     header .container {
-        flex-direction: column; /* Stack the logo above nav on small screens */
-        align-items: space-around; /* Align items to the left */
+        flex-direction: column; 
+        align-items: space-around; 
         padding: 10px 20px;
     }
 
-    /* Make the nav items smaller and keep them in one row */
     .nav-links {
-        flex-direction: row; /* Keep navigation items in a single row */
+        flex-direction: row; 
         gap: 10px;
         margin-top: 10px;
         width: 100%;
-        justify-content: space-around; /* Align items to the left */
+        justify-content: space-around; 
     }
 
     .nav-links li a {
-        font-size: 14px; /* Smaller font size for mobile */
+        font-size: 14px; 
         padding: 8px 15px;
+        background-color: #718191;
     }
 
-    /* Adjust the logo size and spacing */
     .logo {
-        font-size: 20px; /* Reduce logo size for mobile */
-        margin-bottom: 10px; /* Add some space between logo and navigation */
+        font-size: 20px; 
+        margin-bottom: 10px; 
     }
 }
