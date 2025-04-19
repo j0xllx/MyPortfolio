@@ -6,6 +6,8 @@
   <title>Jobelle Gomez | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 
 </head>
 <body>
@@ -69,11 +71,7 @@
               <p>Worked on real-world web applications and client projects.</p>
             </div>
         </div>
-    </div>
-
- 
-      
-      
+    </div>  
     </div>
 
     <div class="about-img">
@@ -82,21 +80,34 @@
   </div>
 </section>
 
+<!-- Projects Section with Video Background -->
+<section id="projects" class="projects-section">
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="videos/video.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
+  <div class="projects-overlay">
+    <h2><span class="My1">My </span><span class="Projects">Projects</span></h2>
     <div class="project-list">
       <div class="project">
         <h3>Portfolio Website</h3>
+        <img src="images/toothUI.png" alt="Portfolio Website Preview" class="project-preview">
         <p>A responsive personal website showcasing my skills and projects. Built using HTML, CSS, and JavaScript.</p>
       </div>
       <div class="project">
         <h3>To-Do List App</h3>
+        <img src="images/toothUI2.png" alt="To-Do App Preview" class="project-preview">
         <p>A minimal and interactive task management app built with vanilla JavaScript.</p>
       </div>
     </div>
-  </section>
+    
+  </div>
+</section>
+
+
+
+
 
   <section id="services">
     <h2>My Services</h2>

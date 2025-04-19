@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   typeEffect();
 
-  // ✅ Moved tab switching code here
+  // Tab switching functionality
   const tabs = document.querySelectorAll('.tab-btn');
   const contents = document.querySelectorAll('.tab-content');
 
@@ -53,6 +53,8 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector(`.${target}`).classList.add('active');
     });
   });
+
 });
+
 
 
