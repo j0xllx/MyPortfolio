@@ -552,7 +552,15 @@ footer {
     
       .timeline-box h4 {
         font-size: 16px;
+        color: #555;
       }
+
+      .timeline-box p {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.5;
+      }
+
     .about-container {
       flex-direction: column;
       align-items: center;
@@ -602,10 +610,12 @@ footer {
       }
     
       .about-content h2,
-      .about-content p,
+      .about-content p{
+        color: white;
+      }
       .journey h3,
       .journey p {
-        color: #fff;
+        color: #434343;
       }
   
     .contact-container {
