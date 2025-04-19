@@ -15,7 +15,7 @@ body {
 
 /* Header and Nav */
 header {
-    background: #333;
+    background: #190111;
     color: #fff;
     padding: 15px 0;
     position: sticky;
@@ -38,34 +38,92 @@ header .container {
     border: #000306;
     border-width: 5px;
 }
+.port {
+  color: white;
+  font-size: 30px;
+}
+.J{
+  color: white;
+  font-size: 45px;
+}
+.G{
+  color: #681755;
+  font-size: 45px;
+}
+.My{
+  color:white;
+  padding-right: 5px;
+}
+.Journey{
+  color:#681755;
+}
+.Me{
+  color:white;
+  padding-left: 5px;
+}
+.About{
+  color:#681755;
+}
+
+.folio {
+  color: #681755; /* or any dark color */
+  font-size: 30px;
+  font-family: fantasy;
+}
+.typing-text {
+  font-size: 30px;
+  color: #1b041a;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor {
+  display: inline-block;
+  font-weight: bold;
+  color: #333;
+  animation: blink 0.7s infinite;
+}
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 6px;
 }
 
 .nav-links li a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: block;
     text-align: center;
     padding: 8px 16px;
-    border-radius: 5px;
     transition: background 0.3s ease;
 }
 
 .nav-links li a:hover {
-    background-color: rgba(54, 57, 61, 0.1);
+    color: rgb(255, 255, 255);
 }
+.nav-links li a i:hover {
+  color: rgb(255, 255, 255);
+}
+.nav-links li a i {
+  margin-right: 5px;
+}
+
+
 .intro-text h2 {
     font-size: 40px;
     font-weight: bold;
   }
   
   .intro-white {
-    color: white;
+    color: rgb(95, 88, 97);
     font-size: 35px;
   }
   
@@ -75,12 +133,15 @@ header .container {
     font-family: fantasy;
   }
   
-/* HERO SECTION */
-.hero {
-    background: linear-gradient(to right, #f8f8f8,  #a795b9);
+  .hero {
+    position: relative; 
+    background-image: url('images/frame1.png');
+    background-size: cover;         
+    background-position: center;    
+    background-repeat: no-repeat;  
     padding: 80px 20px;
     text-align: center;
-}
+  }
 
 .hero-content {
     display: flex;
@@ -91,11 +152,11 @@ header .container {
 }
 
 .profile-pic {
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid #333;
+    border: 4px solid #260520;
     display: block;
 }
 
@@ -109,10 +170,6 @@ header .container {
     color: #333;
 }
 
-.intro-text p {
-    font-size: 16px;
-    color: #555;
-}
 .intro-text button{
     margin-top: 7px;
     font-size: medium;
@@ -121,7 +178,7 @@ header .container {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     width: 150px;
     height: 30px;
-    background-color: #556c85;
+    background-color: #330839;
 }
 .intro-text button:hover {
     background-color: #3f4954;
@@ -139,7 +196,7 @@ section {
 /* ABOUT SECTION - New Layout */
 .about-section {
     position: relative;
-    background: url('images/bg.jpg') center/cover no-repeat;      
+    background:#10030f;    
     padding: 80px 20px;
   }
   
@@ -171,102 +228,91 @@ section {
   
   .about-content h2 {
     font-size: 32px;
-    color: #2b0e24;
+    color: #d7d4d4;
     margin-bottom: 20px;
   }
   
   .about-content p {
+    position: relative;
     font-size: 16px;
     line-height: 1.8;
-    color: #444;
+    color: #d7d4d4;
   }
-  
   .journey {
     margin-top: 20px;
-    padding: 10px 5px; /* Reduced padding top and bottom */
-    background: #f6f3fa;
-    text-align: center;
-    border-radius: 20px; 
+    padding: 20px;
+    color: #b84eaa;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px solid violet;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 750px;
+    height: 340px;
+    margin-inline: auto;
   }
   
   .journey h3 {
-    font-size: 24px;
-    color: #2b0e24;
-    margin: 10px 0 20px; /* top: 10px, bottom: 20px */
-    font-weight: bold;
-  }
-  
-  .vertical-timeline {
-    position: relative;
-    max-width: 700px;
-    margin: auto;
-    padding: 10px 0;
-  }
-  
-  .vertical-timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 3px;
-    background: #c7b4dd;
-    transform: translateX(-50%);
-  }
-  
-  .timeline-block {
-    position: relative;
-    padding: 25px 10px;
-    text-align: center;
-  }
-  
-  .timeline-icon {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 0;
-    width: 38px;
-    height: 38px;
-    background: #fff;
-    border: 2px solid #6d4d90;
-    color: #6d4d90;
-    border-radius: 50%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    z-index: 2;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 10px;
   }
   
-  .timeline-box {
-    margin-top: 25px;
-    background-color: #fff;
-    padding: 15px 20px;
-    border-radius: 10px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
-    display: inline-block;
-    max-width: 500px;
-    position: relative;
-    z-index: 1;
-    transition: all 0.3s ease;
-  }
+/* Folder Tabs */
+.folder-tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.tab-btn {
+  background-color: #2e0347;
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid violet;
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+  top: 2px;
+  transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+  background-color: #5f1e7c;
+  color: #fff;
+  z-index: 2;
+}
+
+.tab-btn:not(.active):hover {
+  background-color: #4a0f6a;
+}
+
+/* Tab Content */
+.tab-content {
+  display: none; /* Hide all tab contents by default */
+}
+
+.tab-content.active {
+  display: block; /* Show the active tab content */
+}
+
+/* Journey Content */
+.journey-content {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 2px solid violet;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 5px;
+  color: white;
+}
+
   
-  .timeline-box:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
-  }
   
-  .timeline-box h4 {
-    font-size: 18px;
-    color: #6d4d90;
-    margin-bottom: 6px;
-  }
-  
-  .timeline-box p {
-    font-size: 14px;
-    color: #555;
-    line-height: 1.5;
-  }
   
   /* Projects Section */
   #projects {
@@ -400,6 +446,7 @@ section {
     padding: 20px;
     border-radius: 8px;
     opacity: 0.8; /* Lower opacity */
+    text-align: center; 
   }
   .social-container h3{
     font-size: 20px;
@@ -408,22 +455,34 @@ section {
   .social-links {
     list-style: none;
     padding: 0;
+    display: flex; /* display side by side */
+    gap: 15px; /* space between icons */
+    justify-content: center; /* or center, if you want them centered */
+    margin-top: 15px;
+
   }
-  
   .social-links li {
-    margin-bottom: 10px;
+    display: flex;
   }
   
   .social-links a {
-    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6d4d90; /* adjust as needed */
     text-decoration: none;
-    font-size: 17px;
-    transition: color 0.3s ease;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
   }
   
   .social-links a:hover {
-    color: #007bff;
+    background-color: #8c6caf; /* hover effect */
   }
+  
   
   /* Form Styling */
   form input,
@@ -462,28 +521,66 @@ footer {
     header .container {
       flex-direction: column;
       align-items: center;
-      padding: 10px 20px;
     }
+    .port {
+      color: white;
+      font-size: 20px;
+    }
+    .J{
+      color: white;
+      font-size: 35px;
+    }
+    .G{
+      color: #681755;
+      font-size: 35px;
+    }
+    
+    .folio {
+      color: #681755; /* or any dark color */
+      font-size: 20px;
+      font-family: fantasy;
+    }
+    
   
     .nav-links {
       flex-direction: row;
-      gap: 8px;
-      margin-top: 8px;
+      gap: 3px;
       width: 100%;
-      justify-content: space-around;
     }
   
     .nav-links li a {
-      font-size: 13px;
-      padding: 5px 10px;
-      background-color: #718191;
+      display: flex;
+      flex-direction: column; /* stack icon over text */
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      padding: 8px;
+      text-align: center;
+      color: #b1a2b3;
+      background-color: transparent;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
-  
-    .logo {
+    
+    .nav-links li a i {
       font-size: 20px;
-      margin-bottom: 10px;
+      margin: 0;
+      color: inherit; /* Inherit the text color */
     }
-  
+    
+    /* Hover on the full container (icon + text) */
+    .nav-links li a:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+    }
+    
+    .nav-links {
+      gap: 12px;
+    }
+
+    .journey {
+      height: 440px;
+    }    
       .hero {
         padding: 40px 10px;
         min-height: auto;
@@ -501,7 +598,7 @@ footer {
         border-radius: 20%;
         height: 150px;
         width: 150px;
-        border-color: #35414e;
+        border-color: #260520;
       }
     
       .intro-text {
@@ -515,12 +612,12 @@ footer {
     
       .intro-white {
         font-size: 22px;
-        color: #8b8c8d;
+        color: rgb(95, 88, 97);
       }
     
       .intro-name {
         font-size: 30px;
-        color: #35414e;
+        color: #3b0c36;
       }
     
       .intro-text p {
@@ -613,9 +710,14 @@ footer {
       .about-content p{
         color: white;
       }
-      .journey h3,
+      .journey h3{
+        color: #a5449d;
+      }
+      .journey h4{
+        color: #d106c3;
+      }
       .journey p {
-        color: #434343;
+        color: #fefefe;
       }
   
     .contact-container {
