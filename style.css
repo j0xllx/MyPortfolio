@@ -74,6 +74,13 @@ header .container {
 .Services{
   color:#681755;
 }
+.My3{
+  color:white;
+  padding-right: 5px;
+}
+.Tools{
+  color:#681755;
+}
 
 
 .typing-text {
@@ -384,12 +391,18 @@ section {
   
 
   /* Services Section */
-#services {
+  #services {
+    position: relative; /* helps stack shadows properly */
+    z-index: 1;          /* ensures it's above other elements */
     padding: 60px 20px;
-    background:#10030f;  
+    background: #10030f;
+    box-shadow: 
+      0 -15px 30px rgba(0, 0, 0, 0.6),   /* top shadow */
+      0 25px 35px rgba(0, 0, 0, 0.3);     /* bottom shadow */
     text-align: center;
-
   }
+  
+  
   
   #services h2 {
     font-size: 28px;
@@ -444,7 +457,8 @@ section {
   
 #tools{
   position: relative; 
-    background-image: url('images/final.png');
+    background-image: url('images/pls.png');
+    border: 2px solid violet; /* violet border */
     background-size: cover;         
     background-position: center;    
     background-repeat: no-repeat;  
