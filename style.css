@@ -67,6 +67,13 @@ header .container {
 .Projects{
   color:#681755;
 }
+.My2{
+  color:white;
+  padding-right: 5px;
+}
+.Services{
+  color:#681755;
+}
 
 
 .typing-text {
@@ -343,7 +350,7 @@ section {
   }
   
   .project {
-    background-color: #fff;
+    background-color: #dbc3db;
     width: 280px;
     padding: 20px;
     border-radius: 8px;
@@ -379,8 +386,9 @@ section {
   /* Services Section */
 #services {
     padding: 60px 20px;
-    background-color: #fff;
+    background:#10030f;  
     text-align: center;
+
   }
   
   #services h2 {
@@ -434,7 +442,15 @@ section {
     margin-bottom: 20px;
   }
   
-  
+#tools{
+  position: relative; 
+    background-image: url('images/final.png');
+    background-size: cover;         
+    background-position: center;    
+    background-repeat: no-repeat;  
+    padding: 80px 20px;
+    text-align: center;
+}
 
 /* Contact Section */
 #contact {

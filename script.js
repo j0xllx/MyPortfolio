@@ -11,7 +11,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 document.addEventListener("DOMContentLoaded", () => {
   // Typing effect setup
-  const words = ["Web Developer", "Artist", "UI/UX Designer", "Creative Thinker"];
+  const words = ["Frontend Developer", "Artist", "UI/UX Designer", "Creative Thinker"];
   let wordIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
