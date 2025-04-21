@@ -8,26 +8,55 @@
 </head>
 <body>
   <div class="popup-container">
+    <!-- Close Button -->
     <button class="close-btn" onclick="window.close()">✕</button>
 
-    <h2 id="popup-title">Loading...</h2>
-    <img id="popup-image" src="" alt="Project Preview" class="popup-image">
-    <p id="popup-description" class="popup-description">Loading description...</p>
-    <a id="figma-link" href="#" target="_blank" class="popup-link">View on Figma</a>
+    <!-- Content Wrapper: Image on the left, Title and Paragraph on the right -->
+    <div class="popup-content">
+      <div class="popup-image-container">
+        <img id="popup-img" src="" alt="Project Preview" class="popup-image">
+      </div>
+
+      <div class="popup-text-container">
+        <h2 id="popup-title">Portfolio Website</h2>
+        <p id="popup-desc" class="popup-description">
+          A responsive personal website showcasing my skills and projects. Built using HTML, CSS, and JavaScript.
+        </p>
+
+        <!-- View Figma button -->
+        <a id="figma-link" href="#" target="_blank" class="popup-link">View on Figma</a>
+      </div>
+    </div>
+
+    <!-- Embed Figma -->
+    <div class="figma-embed">
+      <iframe
+        id="figma-iframe"
+        style="border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 10px;"
+        width="100%"
+        height="450"
+        allowfullscreen
+      ></iframe>
+    </div>
   </div>
 
   <script>
-    function getQueryParam(name) {
-      const urlParams = new URLSearchParams(window.location.search);
-      return decodeURIComponent(urlParams.get(name) || '');
-    }
+    // Parse URL parameters (title, description, image, figma)
+    const urlParams = new URLSearchParams(window.location.search);
+    const title = urlParams.get('title');
+    const desc = urlParams.get('desc');
+    const img = urlParams.get('img');
+    const figma = urlParams.get('figma');
 
-    document.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("popup-title").textContent = getQueryParam('title');
-      document.getElementById("popup-description").textContent = getQueryParam('desc');
-      document.getElementById("popup-image").src = getQueryParam('img');
-      document.getElementById("figma-link").href = getQueryParam('figma');
-    });
+    // Set the content dynamically
+    document.getElementById('popup-title').textContent = decodeURIComponent(title);
+    document.getElementById('popup-desc').textContent = decodeURIComponent(desc);
+    document.getElementById('popup-img').src = decodeURIComponent(img);
+
+    // Embed Figma prototype link
+    const figmaURL = decodeURIComponent(figma);
+    document.getElementById('figma-iframe').src = `https://www.figma.com/embed?embed_host=share&url=${figmaURL}`;
+    document.getElementById('figma-link').href = figmaURL;
   </script>
 </body>
 </html>

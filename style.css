@@ -385,7 +385,7 @@ section {
   }
   
   .project h3 {
-    font-size: 24px;
+    font-size: 22px;
     color: #2b0e24;
     margin-bottom: 15px;
   }
@@ -640,7 +640,20 @@ footer {
       gap: 3px;
     }
 
-   
+    .journey {
+      margin-top: 20px;
+      padding: 20px;
+      color: #b84eaa;
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 2px solid violet;
+      border-radius: 20px;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 750px;
+      margin-inline: auto;
+    }   
       .hero {
         padding: 40px 10px;
         min-height: auto;
