@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #10030f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}
+
+.popup-container {
+  background: #1e0820;
+  border: 2px solid #a020f0;
+  border-radius: 15px;
+  padding: 30px 20px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  position: relative;
+  text-align: center;
+}
+
+.popup-container h2 {
+  font-size: 24px;
+  color: #f8c7ff;
+  margin-bottom: 20px;
+}
+
+.popup-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.popup-description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #e3d8e6;
+  margin-bottom: 25px;
+}
+
+.popup-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #6c1c59;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.popup-link:hover {
+  background-color: #8c2a77;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #ff3366;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  color: white;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.close-btn:hover {
+  background: #ff0055;
+}

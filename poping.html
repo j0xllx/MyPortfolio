@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project Details</title>
+  <link rel="stylesheet" href="poping.css">
+</head>
+<body>
+  <div class="popup-container">
+    <button class="close-btn" onclick="window.close()">✕</button>
+
+    <h2 id="popup-title">Loading...</h2>
+    <img id="popup-image" src="" alt="Project Preview" class="popup-image">
+    <p id="popup-description" class="popup-description">Loading description...</p>
+    <a id="figma-link" href="#" target="_blank" class="popup-link">View on Figma</a>
+  </div>
+
+  <script>
+    function getQueryParam(name) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return decodeURIComponent(urlParams.get(name) || '');
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("popup-title").textContent = getQueryParam('title');
+      document.getElementById("popup-description").textContent = getQueryParam('desc');
+      document.getElementById("popup-image").src = getQueryParam('img');
+      document.getElementById("figma-link").href = getQueryParam('figma');
+    });
+  </script>
+</body>
+</html>
