@@ -190,19 +190,34 @@ header .container {
     color: #333;
 }
 
-.intro-text button{
-    margin-top: 7px;
-    font-size: medium;
-    color: rgb(241, 240, 240);
-    border-radius: 8px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    width: 150px;
-    height: 30px;
-    background-color: #330839;
+.resume-button {
+  margin-top: 7px;
+  font-size: medium;
+  color: white;
+  text-decoration: none; 
+  border-radius: 8px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  width: 150px;
+  height: 30px;
+  background-color: #330839;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
-.intro-text button:hover {
-    background-color: #3f4954;
-  }
+
+.resume-button:hover {
+  background-color: #4a0f50;
+  transform: translateY(-2px);
+}
+
+.intro-text a {
+  font-size: 16px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: normal;
+  text-decoration: none; 
+}
 
 /* Sections */
 section {
