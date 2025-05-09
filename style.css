@@ -498,6 +498,17 @@ section {
     margin-bottom: 10px; 
 }
 
+.tool-logo {
+  width: 60px;       /* Fixed width */
+  height: 60px;      /* Fixed height */
+  object-fit: contain; /* Keeps the logo's aspect ratio */
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 /* Contact Section */
 #contact {
     padding: 60px 20px;
