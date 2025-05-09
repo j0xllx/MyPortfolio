@@ -30,14 +30,15 @@
 
   <section id="home" class="hero">
     <div class="hero-content">
-      <img src="images/me.jpg" alt="My Photo" class="profile-pic" />
+      <img src="images/me.jpg" alt="My Photo" class="profile-pic" oncontextmenu="return false;" />
       <div class="intro-text">
         <h2><span class="intro-white">Hi There! I'm</span> <span class="intro-name">Jobelle</span></h2>
         <p class="typing-text"><span id="typed-text"></span><span class="cursor">|</span></p>
         <a href="files/Resume.pdf" target="_blank" class="resume-button">View Resume</a>
       </div>
     </div>
-  </section>
+</section>
+
 
 <!-- About Section -->
 <section id="about" class="about-section">
@@ -81,8 +82,14 @@
     </div>
 
     <div class="about-img">
-      <img src="images/about1.jpg" alt="About Me Image">
+      <div class="image-fade">
+        <img src="images/about2.jpg" alt="About Me 1" class="fade-img" />
+        <img src="images/about3.jpg" alt="About Me 2" class="fade-img" /> 
+        <img src="images/about4.jpg" alt="About Me 3" class="fade-img" />   
+      </div>
     </div>
+    
+    
   </div>
 </section>
 
@@ -193,13 +200,22 @@
         <p>A local web server stack I use for running and testing PHP projects locally.</p>
       </div>
       
-      
-      
-  
       <div class="project">
         <img src="https://www.python.org/static/opengraph-icon-200x200.png" alt="Python Logo" class="tool-logo" />
         <h3>Python</h3>
         <p>One of the core languages I use for automation, scripting, and backend logic.</p>
+      </div>
+
+      <div class="project">
+        <img src="https://eudeka.storage.googleapis.com/wp/flutter-logo-sharing-1.png" alt="Flutter Logo" class="tool-logo" />
+        <h3>Flutter</h3>
+        <p>A UI toolkit I use for building natively compiled applications for mobile, web, and desktop from a single codebase.</p>
+      </div> 
+  
+      <div class="project">
+        <img src="https://cdn.freebiesupply.com/logos/large/2x/nodejs-icon-logo-png-transparent.png" alt="Node.js Logo" class="tool-logo" />
+        <h3>Node.js</h3>
+        <p>JavaScript runtime I use for building fast, scalable network applications.</p>
       </div>
     </div>
   </section>
