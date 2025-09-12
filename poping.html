@@ -11,7 +11,7 @@
     <!-- Close Button -->
     <button class="close-btn" onclick="window.close()">✕</button>
 
-    <!-- Content Wrapper: Image on the left, Title and Paragraph on the right -->
+    <!-- Content Wrapper -->
     <div class="popup-content">
       <div class="popup-image-container">
         <img id="popup-img" src="" alt="Project Preview" class="popup-image">
@@ -19,18 +19,17 @@
 
       <div class="popup-text-container">
         <h2 id="popup-title"></h2>
-        <p id="popup-desc" class="popup-description">
-        </p>
+        <p id="popup-desc" class="popup-description"></p>
 
-        <!-- View Figma button -->
-        <a id="figma-link" href="#" target="_blank" class="popup-link">View on Figma</a>
+        <!-- View Design Button -->
+        <a id="design-link" href="#" target="_blank" class="popup-link">View Design</a>
       </div>
     </div>
 
-    <!-- Embed Figma -->
+    <!-- Embed Area -->
     <div class="figma-embed">
       <iframe
-        id="figma-iframe"
+        id="design-iframe"
         style="border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 10px;"
         width="100%"
         height="450"
@@ -40,23 +39,37 @@
   </div>
 
   <script>
-    // Parse URL parameters (title, description, image, figma)
+    // Parse URL parameters
     const urlParams = new URLSearchParams(window.location.search);
     const title = urlParams.get('title');
     const desc = urlParams.get('desc');
     const img = urlParams.get('img');
-    const figma = urlParams.get('figma');
+    const design = urlParams.get('figma'); // Keep using "figma" for now for backward compatibility
 
-    // Set the content dynamically
+    // Populate dynamic content
     document.getElementById('popup-title').textContent = decodeURIComponent(title);
     document.getElementById('popup-desc').textContent = decodeURIComponent(desc);
     document.getElementById('popup-img').src = decodeURIComponent(img);
 
-    // Embed Figma prototype link
-    const figmaURL = decodeURIComponent(figma);
-    document.getElementById('figma-iframe').src = `https://www.figma.com/embed?embed_host=share&url=${figmaURL}`;
-    document.getElementById('figma-link').href = figmaURL;
-  </script>
+    const designURL = decodeURIComponent(design);
+    const designIframe = document.getElementById('design-iframe');
+    const designLink = document.getElementById('design-link');
 
+    // Detect if it's a Canva or Figma link and embed accordingly
+    if (designURL.includes("figma.com")) {
+      designIframe.src = `https://www.figma.com/embed?embed_host=share&url=${designURL}`;
+      designLink.textContent = "View on Figma";
+    } else if (designURL.includes("canva.com")) {
+      designIframe.src = designURL;
+      designLink.textContent = "View on Canva";
+    } else {
+      // Default fallback
+      designIframe.src = designURL;
+      designLink.textContent = "View Design";
+    }
+
+    // Set the link target
+    designLink.href = designURL;
+  </script>
 </body>
 </html>
