@@ -6,6 +6,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden; /* prevent scrolling outside container */
   color: white;
 }
 
@@ -14,21 +15,37 @@ body {
   border: 2px solid #a020f0;
   border-radius: 15px;
   padding: 30px 20px;
+  width: 90vw;
   max-width: 800px;
-  width: 90%;
+  height: 90vh; /* fixed height */
+  max-height: 600px; /* ensures it's not too tall */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   position: relative;
+  overflow-y: auto; /* scroll if content is too tall */
   text-align: center;
-  z-index: 10; /* add this line */
+  z-index: 10;
 }
 
 .close-btn {
-  z-index: 1000; /* add this line */
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #ff3366;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  color: white;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  z-index: 1000; /* ensure it's above iframe */
 }
 
 .figma-embed iframe {
-  position: relative; /* add this line */
-  z-index: 1; /* add this line */
+  position: relative;
+  z-index: 1; /* keep below the close button */
+  border-radius: 10px;
 }
 
 
