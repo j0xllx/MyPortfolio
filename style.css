@@ -449,14 +449,16 @@ section {
     color: #555;
   }
   .project-preview {
-    width: 10%;           /* Make the image fill the container's width */
-    max-width: 25px;      /* Reduce the max width of the image */
-    height: auto;          /* Keep the aspect ratio intact */
-    margin: 10px 0;        /* Space above and below the image */
-    border-radius: 8px;    /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    object-fit: cover;     /* Ensures the image fills the space without distortion */
+    width: 100%;
+    height: auto;
+    aspect-ratio: 9 / 16; /* Consistent mobile screen shape */
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
   }
+
   
 
   /* Services Section */
