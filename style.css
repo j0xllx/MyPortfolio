@@ -858,13 +858,8 @@ footer {
         color: #fefefe;
       }
       .project-preview {
-        width: 100%;
-        height: 180px; /* or 200px, fixed height creates uniformity */
-        object-fit: cover; /* Crop the image to fit */
-        border-radius: 8px;
-        display: block;
-}
-
+        max-width: 200px;  /* Make the image even smaller on mobile */
+      }
   
     .contact-container {
       flex-direction: column;
@@ -908,21 +903,12 @@ footer {
   
     .service-card,
     .project {
-      background-color: #dbc3db;
-      width: 280px;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-}
-    .project img {
-      display: block;
+      flex: 1 1 calc(50% - 20px);
       max-width: 100%;
-      height: auto;
+      padding: 15px;
+      box-sizing: border-box;
     }
+  
     .service-card h3,
     .project h3 {
       font-size: 18px;
