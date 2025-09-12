@@ -451,7 +451,7 @@ section {
   .project-preview {
     width: 100%;
     height: auto;
-    aspect-ratio: 9 / 16; /* Consistent mobile screen shape */
+    aspect-ratio: 1 / 1; /* Consistent mobile screen shape */
     object-fit: cover;
     border-radius: 8px;
     display: block;
