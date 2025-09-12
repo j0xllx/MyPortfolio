@@ -453,6 +453,7 @@ section {
     height: auto;
     aspect-ratio: 1 / 1; /* Consistent mobile screen shape */
     object-fit: cover;
+    object-position: center;
     border-radius: 8px;
     display: block;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
