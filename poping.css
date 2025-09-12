@@ -34,7 +34,7 @@ body {
 
 .popup-container::-webkit-scrollbar-track {
   background: #1e0820; /* match container background */
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .popup-container::-webkit-scrollbar-thumb {
