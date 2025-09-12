@@ -19,7 +19,18 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   position: relative;
   text-align: center;
+  z-index: 10; /* add this line */
 }
+
+.close-btn {
+  z-index: 1000; /* add this line */
+}
+
+.figma-embed iframe {
+  position: relative; /* add this line */
+  z-index: 1; /* add this line */
+}
+
 
 .popup-content {
   display: flex;
