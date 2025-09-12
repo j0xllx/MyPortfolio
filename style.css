@@ -449,8 +449,8 @@ section {
     color: #555;
   }
   .project-preview {
-    width: 100%;           /* Make the image fill the container's width */
-    max-width: 250px;      /* Reduce the max width of the image */
+    width: 10%;           /* Make the image fill the container's width */
+    max-width: 25px;      /* Reduce the max width of the image */
     height: auto;          /* Keep the aspect ratio intact */
     margin: 10px 0;        /* Space above and below the image */
     border-radius: 8px;    /* Rounded corners */
