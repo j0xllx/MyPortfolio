@@ -8,10 +8,8 @@
 </head>
 <body>
   <div class="popup-container">
-    <!-- Close Button -->
     <button class="close-btn" onclick="window.close()">✕</button>
 
-    <!-- Content Wrapper -->
     <div class="popup-content">
       <div class="popup-image-container">
         <img id="popup-img" src="" alt="Project Preview" class="popup-image">
@@ -21,13 +19,13 @@
         <h2 id="popup-title"></h2>
         <p id="popup-desc" class="popup-description"></p>
 
-        <!-- View Design Button -->
+        <!-- View Design button -->
         <a id="design-link" href="#" target="_blank" class="popup-link">View Design</a>
       </div>
     </div>
 
-    <!-- Embed Area -->
-    <div class="figma-embed">
+    <!-- Embed only if it's NOT Canva -->
+    <div class="figma-embed" id="embed-wrapper">
       <iframe
         id="design-iframe"
         style="border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 10px;"
@@ -39,14 +37,12 @@
   </div>
 
   <script>
-    // Parse URL parameters
     const urlParams = new URLSearchParams(window.location.search);
     const title = urlParams.get('title');
     const desc = urlParams.get('desc');
     const img = urlParams.get('img');
-    const design = urlParams.get('figma'); // Keep using "figma" for now for backward compatibility
+    const design = urlParams.get('figma'); // still using same param name
 
-    // Populate dynamic content
     document.getElementById('popup-title').textContent = decodeURIComponent(title);
     document.getElementById('popup-desc').textContent = decodeURIComponent(desc);
     document.getElementById('popup-img').src = decodeURIComponent(img);
@@ -54,22 +50,23 @@
     const designURL = decodeURIComponent(design);
     const designIframe = document.getElementById('design-iframe');
     const designLink = document.getElementById('design-link');
+    const embedWrapper = document.getElementById('embed-wrapper');
 
-    // Detect if it's a Canva or Figma link and embed accordingly
+    designLink.href = designURL;
+
     if (designURL.includes("figma.com")) {
+      // Embed Figma
       designIframe.src = `https://www.figma.com/embed?embed_host=share&url=${designURL}`;
       designLink.textContent = "View on Figma";
     } else if (designURL.includes("canva.com")) {
-      designIframe.src = designURL;
+      // Do NOT embed Canva — hide iframe
+      embedWrapper.style.display = "none";
       designLink.textContent = "View on Canva";
     } else {
-      // Default fallback
-      designIframe.src = designURL;
+      // Unknown link – don't embed
+      embedWrapper.style.display = "none";
       designLink.textContent = "View Design";
     }
-
-    // Set the link target
-    designLink.href = designURL;
   </script>
 </body>
 </html>
