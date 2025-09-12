@@ -88,6 +88,13 @@ header .container {
 .Contact{
   color:#681755;
 }
+.My5{
+  color:white;
+  padding-right: 5px;
+}
+.Works{
+  color:#681755;
+}
 
 
 .typing-text {
@@ -458,6 +465,59 @@ section {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin: 10px 0;
   }
+  /* My Works Section */
+.my-works-section {
+  padding: 60px 20px;
+  background-color: #10030f; /* Same as body background for consistency */
+  color: white;
+  text-align: center;
+}
+
+.my-works-section h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.works-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+  padding: 0 20px;
+}
+
+.work-item {
+  background-color: #1e0820;
+  border: 1px solid #a020f0;
+  border-radius: 12px;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(160, 32, 240, 0.4);
+}
+
+.work-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+}
+
+.work-item h3 {
+  color: #f8c7ff;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.work-item p {
+  font-size: 14px;
+  color: #e3d8e6;
+}
 
   /* Services Section */
   #services {
@@ -860,6 +920,20 @@ footer {
       .project-preview {
         max-width: 200px;  /* Make the image even smaller on mobile */
       }
+      /* Responsive Text */
+
+  .my-works-section h2 {
+      font-size: 28px;
+    }
+
+    .work-item h3 {
+      font-size: 16px;
+    }
+
+    .work-item p {
+      font-size: 13px;
+    }
+
   
     .contact-container {
       flex-direction: column;
