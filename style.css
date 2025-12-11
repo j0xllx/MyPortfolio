@@ -465,6 +465,26 @@ section {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin: 10px 0;
   }
+  .timeline-btn {
+  display: inline-block;
+  padding: 10px 65px;
+  background-color: #330839;
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 20px;
+  border: 2px solid #620e5e;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.timeline-btn:hover {
+  background-color: #4a0f50;
+  transform: translateY(-2px);
+}
+
   /* My Works Section */
 .my-works-section {
   padding: 60px 20px;
