@@ -299,12 +299,17 @@
 
       <!-- Right Container with Contact Form -->
       <div class="contact-form">
-        <form action="contact.php" method="POST" enctype="text/plain">
+        <form action="https://formsubmit.co/gomezjobelle.024@gmail.com" method="POST">
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
           <textarea name="message" placeholder="Your Message" required></textarea>
+
+          <!-- Optional: turn off captcha -->
+          <input type="hidden" name="_captcha" value="false">
+
           <button type="submit">Send Message</button>
-        </form>
+      </form>
+
       </div>
     </div>
   </section>
