@@ -231,7 +231,7 @@
       </div>
       
       <div class="project">
-        <img src="https://brandslogos.com/wp-content/uploads/images/large/xampp-logo.png" alt="XAMPP Logo" class="tool-logo" />
+        <img src="https://images.seeklogo.com/logo-png/27/1/xampp-logo-png_seeklogo-274098.png" alt="XAMPP Logo" class="tool-logo" />
         <h3>XAMPP</h3>
         <p>A local web server stack I use for running and testing PHP projects locally.</p>
       </div>
@@ -299,20 +299,13 @@
 
       <!-- Right Container with Contact Form -->
       <div class="contact-form">
-        <form id="contactForm" action="https://formsubmit.co/gomezjobelle.024@gmail.com" method="POST">
+        <form action="https://formsubmit.co/gomezjobelle.024@gmail.com" method="POST" onsubmit="alert('Your message has been sent successfully!');">
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
           <textarea name="message" placeholder="Your Message" required></textarea>
 
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="javascript:void(0);">
-
           <button type="submit">Send Message</button>
-        </form>
-
-        <div id="popupMessage" style="display:none; background:#4caf50; color:white; padding:15px; margin-top:10px; border-radius:5px;">
-          ✔ Your message was sent successfully!
-        </div>
+      </form>
 
       </div>
     </div>
