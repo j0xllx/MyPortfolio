@@ -299,13 +299,20 @@
 
       <!-- Right Container with Contact Form -->
       <div class="contact-form">
-        <form action="https://formsubmit.co/gomezjobelle.024@gmail.com" method="POST">
+        <form id="contactForm" action="https://formsubmit.co/gomezjobelle.024@gmail.com" method="POST">
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
           <textarea name="message" placeholder="Your Message" required></textarea>
 
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="javascript:void(0);">
+
           <button type="submit">Send Message</button>
-      </form>
+        </form>
+
+        <div id="popupMessage" style="display:none; background:#4caf50; color:white; padding:15px; margin-top:10px; border-radius:5px;">
+          ✔ Your message was sent successfully!
+        </div>
 
       </div>
     </div>

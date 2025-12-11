@@ -66,3 +66,7 @@ document.querySelectorAll('.project').forEach(project => {
   });
 });
 
+document.getElementById('contactForm').addEventListener('submit', function() {
+    document.getElementById('popupMessage').style.display = 'block';
+});
+
