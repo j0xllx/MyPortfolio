@@ -405,6 +405,11 @@ section {
   overflow: hidden;
   min-height: 100vh;
 }
+.ProjectsIntro{
+  font-size: medium;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 20px;
+}
 .projects-overlay {
   position: relative;
   z-index: 1;
@@ -464,6 +469,11 @@ section {
     display: block;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin: 10px 0;
+  }
+  .paragraph{
+    margin-top: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
   }
   .timeline-btn {
   display: inline-block;
@@ -556,6 +566,12 @@ section {
     margin-bottom: 15px;
     color: #333;
   }
+  .ServicesIntro{
+    font-size: medium;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    padding-bottom: 20px;
+  }
   
   .services-container {
     display: flex;
@@ -616,7 +632,12 @@ section {
     font-size: 30px;
     margin-bottom: 10px; 
 }
-
+.ToolsIntro{
+    font-size: medium;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    padding-bottom: 20px;
+}
 .tool-logo {
   width: 60px;       /* Fixed width */
   height: 60px;      /* Fixed height */
