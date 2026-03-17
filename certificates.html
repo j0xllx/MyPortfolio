@@ -1,36 +1,59 @@
+<!-- Hidden Certificates Section -->
 <section id="certificates-section" class="certificates">
+  <!-- Close button -->
+  <button id="close-cert" class="close-btn">&times;</button>
+
   <h2>My Certificates</h2>
+
   <div class="certificates-gallery">
-    <a href="cert1.jpg" target="_blank">
-      <img src="cert1.jpg" alt="Certificate 1">
-    </a>
-    <a href="cert2.jpg" target="_blank">
-      <img src="cert2.jpg" alt="Certificate 2">
-    </a>
-    <a href="cert3.jpg" target="_blank">
-      <img src="cert3.jpg" alt="Certificate 3">
-    </a>
-    <!-- Add more certificate images as needed -->
+    <img src="cert1.jpg" alt="Certificate 1">
+    <img src="cert2.jpg" alt="Certificate 2">
+    <img src="cert3.jpg" alt="Certificate 3">
+    <!-- Add more certificates as needed -->
   </div>
 </section>
 
+<!-- Lightbox for clicked certificate -->
+<div id="lightbox" class="lightbox">
+  <span id="lightbox-close">&times;</span>
+  <img class="lightbox-img" src="" alt="Certificate">
+</div>
+
 <style>
-/* Section styling */
+/* Certificates section styling */
 #certificates-section {
-  padding: 60px 20px;
-  text-align: center;
-  background: linear-gradient(120deg, #330839, #4a0f50); /* purple gradient */
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background: rgba(51, 8, 57, 0.95);
   color: white;
+  padding: 50px 20px;
+  z-index: 1000;
+  text-align: center;
 }
 
-/* Section title */
 #certificates-section h2 {
   font-size: 36px;
-  margin-bottom: 40px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-bottom: 30px;
 }
 
-/* Gallery layout */
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 36px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Gallery */
 .certificates-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -38,20 +61,89 @@
   gap: 30px;
 }
 
-/* Certificates images */
-.certificates-gallery a img {
-  width: 400px; /* wider size */
-  height: auto;
+.certificates-gallery img {
+  width: 400px; /* wider than height for landscape */
+  height: 250px;
+  object-fit: cover;
   border: 2px solid #fff;
   border-radius: 10px;
   box-shadow: 0 8px 12px rgba(0,0,0,0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect */
-.certificates-gallery a img:hover {
+.certificates-gallery img:hover {
   transform: scale(1.05);
   box-shadow: 0 12px 20px rgba(0,0,0,0.7);
 }
+
+/* Lightbox styling */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+#lightbox-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 48px;
+  color: white;
+  cursor: pointer;
+}
 </style>
+
+<script>
+// Open certificate section when button clicked
+const certBtn = document.querySelector('.cert-btn'); // your hero button
+const certSection = document.getElementById('certificates-section');
+const closeBtn = document.getElementById('close-cert');
+
+certBtn.addEventListener('click', () => {
+  certSection.style.display = 'block';
+  certSection.scrollIntoView({ behavior: 'smooth' });
+});
+
+// Close certificate section
+closeBtn.addEventListener('click', () => {
+  certSection.style.display = 'none';
+});
+
+// Lightbox functionality
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.querySelector('.lightbox-img');
+const lightboxClose = document.getElementById('lightbox-close');
+
+document.querySelectorAll('.certificates-gallery img').forEach(img => {
+  img.addEventListener('click', () => {
+    lightbox.style.display = 'flex';
+    lightboxImg.src = img.src;
+  });
+});
+
+// Close lightbox
+lightboxClose.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+
+// Close lightbox when clicking outside image
+lightbox.addEventListener('click', e => {
+  if(e.target === lightbox) {
+    lightbox.style.display = 'none';
+  }
+});
+</script>
