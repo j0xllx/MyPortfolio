@@ -218,6 +218,27 @@ header .container {
   background-color: #4a0f50;
   transform: translateY(-2px);
 }
+.cert-btn {
+  margin-top: 7px;
+  font-size: medium;
+  color: white;
+  text-decoration: none; 
+  border-radius: 8px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  width: 150px;
+  height: 30px;
+  background-color: #330839;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cert-bth:hover {
+  background-color: #4a0f50;
+  transform: translateY(-2px);
+}
 
 .intro-text a {
   font-size: 16px;

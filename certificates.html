@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Certificates Page</title>
+<style>
+
+  /* Certificates section */
+  #certificates-section {
+    display: none; /* hidden by default */
+    margin-top: 20px;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #certificates-section img {
+    width: 200px;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+  }
+
+  #certificates-section.active {
+    display: flex; /* show when active */
+  }
+</style>
+</head>
+<body>
+
+
+
+<!-- New certificates section -->
+<section id="certificates-section">
+  <img src="cert1.jpg" alt="Certificate 1">
+  <img src="cert2.jpg" alt="Certificate 2">
+  <img src="cert3.jpg" alt="Certificate 3">
+  <!-- Add more certificates as needed -->
+</section>
+
+<script>
+  // Get the button (from other section)
+  const certButton = document.querySelector('.cert-btn');
+  // Get the certificates section
+  const certSection = document.getElementById('certificates-section');
+
+  // Toggle certificates visibility when button is clicked
+  certButton.addEventListener('click', () => {
+    certSection.classList.toggle('active');
+    // Optional: scroll to section when showing
+    if (certSection.classList.contains('active')) {
+      certSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+</script>
+
+</body>
+</html>
