@@ -1,38 +1,57 @@
 <section id="certificates-section" class="certificates">
   <h2>My Certificates</h2>
   <div class="certificates-gallery">
-    <img src="cert1.jpg" alt="Certificate 1">
-    <img src="cert2.jpg" alt="Certificate 2">
-    <img src="cert3.jpg" alt="Certificate 3">
+    <a href="cert1.jpg" target="_blank">
+      <img src="cert1.jpg" alt="Certificate 1">
+    </a>
+    <a href="cert2.jpg" target="_blank">
+      <img src="cert2.jpg" alt="Certificate 2">
+    </a>
+    <a href="cert3.jpg" target="_blank">
+      <img src="cert3.jpg" alt="Certificate 3">
+    </a>
     <!-- Add more certificate images as needed -->
   </div>
 </section>
 
 <style>
+/* Section styling */
 #certificates-section {
-  padding: 40px 20px;
+  padding: 60px 20px;
   text-align: center;
-  background-color: #f8f8f8;
+  background: linear-gradient(120deg, #330839, #4a0f50); /* purple gradient */
+  color: white;
 }
 
+/* Section title */
+#certificates-section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Gallery layout */
 .certificates-gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
+  gap: 30px;
 }
 
-.certificates-gallery img {
-  width: 250px;
+/* Certificates images */
+.certificates-gallery a img {
+  width: 400px; /* wider size */
   height: auto;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  transition: transform 0.2s ease;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 12px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-.certificates-gallery img:hover {
+/* Hover effect */
+.certificates-gallery a img:hover {
   transform: scale(1.05);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.7);
 }
 </style>
