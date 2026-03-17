@@ -50,10 +50,20 @@ body{
 /* Title */
 h2{
     text-align:center;
-    margin-bottom:30px;
+    margin-bottom:10px;
     font-size:28px;
     color:rgb(26, 6, 34);
     text-shadow:0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Description */
+.cert-description{
+    text-align:center;         /* Center description like title */
+    max-width:600px;
+    margin:0 auto 30px auto;
+    color:#555;
+    font-size:15px;
+    line-height:1.5;
 }
 
 /* Grid Layout */
@@ -82,36 +92,28 @@ h2{
 
 /* Tablet */
 @media (max-width: 900px){
-.cert-container{
-    grid-template-columns:1fr;
-}
+    .cert-container{
+        grid-template-columns:1fr;
+    }
 
-.cert-container iframe{
-    height:450px;
-}
+    .cert-container iframe{
+        height:450px;
+    }
 }
 
 /* Phone */
 @media (max-width: 500px){
-#certificates{
-    padding:80px 15px 20px 15px;
-}
+    #certificates{
+        padding:80px 15px 20px 15px;
+    }
 
-h2{
-    font-size:22px;
-}
-.cert-description{
-    text-align:center;        
-    max-width:600px;           
-    margin:0 auto 30px auto;  
-    color:#555;
-    font-size:15px;
-    line-height:1.5;
-}
+    h2{
+        font-size:22px;
+    }
 
-.cert-container iframe{
-    height:380px;
-}
+    .cert-container iframe{
+        height:380px;
+    }
 }
 </style>
 </head>
@@ -123,13 +125,12 @@ h2{
 <button class="exit-btn" onclick="closeCertificates()">✖</button>
 
 <h2>Jobelle's Certificates</h2>
-
-
-<div class="cert-container">
-    <p class="cert-description">
+<p class="cert-description">
 Here are some of the certificates I have earned through training, workshops, 
 and academic activities that helped develop my skills and knowledge.
 </p>
+
+<div class="cert-container">
 
 <iframe src="files/Cert1.pdf"></iframe>
 <iframe src="files/Cert2.pdf"></iframe>
@@ -143,7 +144,7 @@ and academic activities that helped develop my skills and knowledge.
 
 <script>
 function closeCertificates(){
-window.location.href="index.html";
+    window.location.href="index.html";
 }
 </script>
 
