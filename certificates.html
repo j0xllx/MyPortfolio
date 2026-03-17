@@ -9,9 +9,10 @@
 body{
     margin:0;
     font-family:Arial, sans-serif;
-    background:#f5f5f5;
+    background:#f4f4f4;
 }
 
+/* Certificate Section */
 #certificates{
     position:fixed;
     top:0;
@@ -19,10 +20,11 @@ body{
     width:100%;
     height:100%;
     background:white;
-    padding:40px;
+    padding:30px;
     overflow-y:auto;
 }
 
+/* Exit Button */
 .exit-btn{
     position:absolute;
     top:20px;
@@ -33,22 +35,26 @@ body{
     cursor:pointer;
 }
 
+/* Title */
 h2{
     text-align:center;
     margin-bottom:30px;
 }
 
+/* Grid Layout */
 .cert-container{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-    gap:25px;
+    grid-template-columns:repeat(auto-fit, minmax(350px,1fr));
+    gap:20px;
 }
 
+/* PDF Viewer */
 .cert-container iframe{
     width:100%;
     height:500px;
-    border:1px solid #ddd;
     border-radius:10px;
+    border:1px solid #ddd;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
 }
 </style>
 </head>
@@ -63,9 +69,9 @@ h2{
 
 <div class="cert-container">
 
-<iframe src="certificate1.pdf#toolbar=0"></iframe>
-<iframe src="certificate2.pdf#toolbar=0"></iframe>
-<iframe src="certificate3.pdf#toolbar=0"></iframe>
+<iframe src="files/Cert1.pdf"></iframe>
+<iframe src="files/Cert2.pdf"></iframe>
+<iframe src="files/Cert3.pdf"></iframe>
 
 </div>
 
@@ -73,7 +79,7 @@ h2{
 
 <script>
 function closeCertificates(){
-    document.getElementById("certificates").style.display="none";
+document.getElementById("certificates").style.display="none";
 }
 </script>
 
