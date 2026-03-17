@@ -197,8 +197,14 @@ header .container {
     color: #333;
 }
 
+.intro-text .button-container {
+  display: flex;
+  gap: 10px; /* space between buttons */
+  margin-top: 10px; /* space below text */
+}
+
+/* Resume Button */
 .resume-button {
-  margin-top: 7px;
   font-size: medium;
   color: white;
   text-decoration: none; 
@@ -218,8 +224,9 @@ header .container {
   background-color: #4a0f50;
   transform: translateY(-2px);
 }
+
+/* Certificate Button */
 .cert-btn {
-  margin-top: 7px;
   font-size: medium;
   color: white;
   text-decoration: none; 
@@ -235,7 +242,7 @@ header .container {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.cert-bth:hover {
+.cert-btn:hover {
   background-color: #4a0f50;
   transform: translateY(-2px);
 }
