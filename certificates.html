@@ -1,59 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Certificates Page</title>
-<style>
-
-  /* Certificates section */
-  #certificates-section {
-    display: none; /* hidden by default */
-    margin-top: 20px;
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  #certificates-section img {
-    width: 200px;
-    height: auto;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-  }
-
-  #certificates-section.active {
-    display: flex; /* show when active */
-  }
-</style>
-</head>
-<body>
-
-
-
-<!-- New certificates section -->
-<section id="certificates-section">
-  <img src="cert1.jpg" alt="Certificate 1">
-  <img src="cert2.jpg" alt="Certificate 2">
-  <img src="cert3.jpg" alt="Certificate 3">
-  <!-- Add more certificates as needed -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <img src="images/me.jpg" alt="My Photo" class="profile-pic" oncontextmenu="return false;" />
+    <div class="intro-text">
+      <h2><span class="intro-white">Hi There! I'm</span> <span class="intro-name">Jobelle</span></h2>
+      <p class="typing-text"><span id="typed-text"></span><span class="cursor">|</span></p>
+      
+      <!-- Button container -->
+      <div class="button-container">
+        <a href="files/Gomez_Resume.pdf" target="_blank" class="resume-button">View Resume</a>
+        <button type="button" class="cert-btn">View Certificates</button>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- Hidden Certificates Section -->
+<section id="certificates-section" class="certificates">
+  <h2>My Certificates</h2>
+  <div class="certificates-gallery">
+    <img src="cert1.jpg" alt="Certificate 1">
+    <img src="cert2.jpg" alt="Certificate 2">
+    <img src="cert3.jpg" alt="Certificate 3">
+    <!-- Add more certificate images as needed -->
+  </div>
+</section>
+
+<style>
+/* Hero Buttons */
+.button-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.resume-button, .cert-btn {
+  font-size: medium;
+  color: white;
+  text-decoration: none; 
+  border-radius: 8px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  width: 150px;
+  height: 30px;
+  background-color: #330839;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.resume-button:hover, .cert-btn:hover {
+  background-color: #4a0f50;
+  transform: translateY(-2px);
+}
+
+/* Certificates Section - hidden by default */
+#certificates-section {
+  display: none; /* hidden */
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.certificates-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.certificates-gallery img {
+  width: 250px;
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+}
+
+.certificates-gallery img:hover {
+  transform: scale(1.05);
+}
+</style>
+
 <script>
-  // Get the button (from other section)
-  const certButton = document.querySelector('.cert-btn');
-  // Get the certificates section
-  const certSection = document.getElementById('certificates-section');
+// Get the button and certificates section
+const certButton = document.querySelector('.cert-btn');
+const certSection = document.getElementById('certificates-section');
 
-  // Toggle certificates visibility when button is clicked
-  certButton.addEventListener('click', () => {
-    certSection.classList.toggle('active');
-    // Optional: scroll to section when showing
-    if (certSection.classList.contains('active')) {
-      certSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
+certButton.addEventListener('click', () => {
+  certSection.style.display = 'block'; // show the section
+  certSection.scrollIntoView({ behavior: 'smooth' }); // scroll to it
+});
 </script>
-
-</body>
-</html>
