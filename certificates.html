@@ -5,38 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Certificates</title>
 <style>
-/* Hero section for demonstration */
-.hero {
-  padding: 50px 20px;
-  text-align: center;
-  background-color: #f4f4f4;
-}
-
-.hero .cert-btn {
-  font-size: medium;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  width: 150px;
-  height: 30px;
-  background-color: #330839;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  cursor: pointer;
-  margin: 5px;
-}
-
-.hero .cert-btn:hover {
-  background-color: #4a0f50;
-  transform: translateY(-2px);
-}
-
 /* Certificates Section */
 #certificates-section {
-  display: none; /* hidden initially */
+  display: none; /* hidden initially, show via button from other section */
   position: fixed;
   top: 0;
   left: 0;
@@ -79,7 +50,7 @@
 }
 
 /* Certificate images */
-.certificates-gallery img {
+.certificates-gallery a img {
   width: 400px; /* landscape style */
   height: 250px;
   object-fit: cover;
@@ -90,7 +61,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.certificates-gallery img:hover {
+.certificates-gallery a img:hover {
   transform: scale(1.05);
   box-shadow: 0 12px 20px rgba(0,0,0,0.7);
 }
@@ -103,25 +74,30 @@
   <button id="cert-exit">✕</button>
   <h2>My Certificates</h2>
   <div class="certificates-gallery">
-    <img src="cert1.jpg" alt="Certificate 1">
-    <img src="cert2.jpg" alt="Certificate 2">
-    <img src="cert3.jpg" alt="Certificate 3">
+    <a href="cert1.jpg" target="_blank">
+      <img src="cert1.jpg" alt="Certificate 1">
+    </a>
+    <a href="cert2.jpg" target="_blank">
+      <img src="cert2.jpg" alt="Certificate 2">
+    </a>
+    <a href="cert3.jpg" target="_blank">
+      <img src="cert3.jpg" alt="Certificate 3">
+    </a>
     <!-- Add more certificate images as needed -->
   </div>
 </section>
 
 <script>
-// Get elements
-const certBtn = document.querySelector('.cert-btn');
+// Elements
 const certSection = document.getElementById('certificates-section');
 const exitBtn = document.getElementById('cert-exit');
 
-// Show certificates section when button is clicked
-certBtn.addEventListener('click', () => {
+// Function to show certificate section
+function showCertificates() {
   certSection.style.display = 'block';
-});
+}
 
-// Hide certificates section when exit button is clicked
+// Close certificates section
 exitBtn.addEventListener('click', () => {
   certSection.style.display = 'none';
 });
