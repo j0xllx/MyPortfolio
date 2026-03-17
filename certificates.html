@@ -1,5 +1,3 @@
-
-<!-- Hidden Certificates Section -->
 <section id="certificates-section" class="certificates">
   <h2>My Certificates</h2>
   <div class="certificates-gallery">
@@ -11,38 +9,7 @@
 </section>
 
 <style>
-/* Hero Buttons */
-.button-container {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.resume-button, .cert-btn {
-  font-size: medium;
-  color: white;
-  text-decoration: none; 
-  border-radius: 8px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  width: 150px;
-  height: 30px;
-  background-color: #330839;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  cursor: pointer;
-}
-
-.resume-button:hover, .cert-btn:hover {
-  background-color: #4a0f50;
-  transform: translateY(-2px);
-}
-
-/* Certificates Section - hidden by default */
 #certificates-section {
-  display: none; /* hidden */
   padding: 40px 20px;
   text-align: center;
   background-color: #f8f8f8;
@@ -69,14 +36,3 @@
   transform: scale(1.05);
 }
 </style>
-
-<script>
-// Get the button and certificates section
-const certButton = document.querySelector('.cert-btn');
-const certSection = document.getElementById('certificates-section');
-
-certButton.addEventListener('click', () => {
-  certSection.style.display = 'block'; // show the section
-  certSection.scrollIntoView({ behavior: 'smooth' }); // scroll to it
-});
-</script>
