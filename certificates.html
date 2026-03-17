@@ -1,33 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Certificates</title>
-  <link rel="stylesheet" href="style.css">
- 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Certificates</title>
+<style>
+/* Hero section for demonstration */
+.hero {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.hero .cert-btn {
+  font-size: medium;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  width: 150px;
+  height: 30px;
+  background-color: #330839;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.hero .cert-btn:hover {
+  background-color: #4a0f50;
+  transform: translateY(-2px);
+}
+
+/* Certificates Section */
+#certificates-section {
+  display: none; /* hidden initially */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background: rgba(51, 8, 57, 0.95); /* dark overlay */
+  color: white;
+  padding: 50px 20px;
+  z-index: 1000;
+  text-align: center;
+}
+
+/* Exit button */
+#cert-exit {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 36px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* Section title */
+#certificates-section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Gallery layout */
+.certificates-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Certificate images */
+.certificates-gallery img {
+  width: 400px; /* landscape style */
+  height: 250px;
+  object-fit: cover;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 12px rgba(0,0,0,0.5);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificates-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.7);
+}
+</style>
 </head>
 <body>
 
-<!-- Close Button -->
-<button class="close-btn" onclick="history.back()">✕</button>
+<!-- Hero section with View Certificates button -->
+<section class="hero">
+  <h1>Hi There! I'm Jobelle</h1>
+  <button class="cert-btn">View Certificates</button>
+</section>
 
 <!-- Certificates Section -->
-<section id="certificates-section" class="certificates">
-  <h2>Jobelle’s Certificates</h2>
+<section id="certificates-section">
+  <button id="cert-exit">✕</button>
+  <h2>My Certificates</h2>
   <div class="certificates-gallery">
-    <a href="cert1.jpg" target="_blank">
-      <img src="cert1.jpg" alt="Certificate 1">
-    </a>
-    <a href="cert2.jpg" target="_blank">
-      <img src="cert2.jpg" alt="Certificate 2">
-    </a>
-    <a href="cert3.jpg" target="_blank">
-      <img src="cert3.jpg" alt="Certificate 3">
-    </a>
+    <img src="cert1.jpg" alt="Certificate 1">
+    <img src="cert2.jpg" alt="Certificate 2">
+    <img src="cert3.jpg" alt="Certificate 3">
     <!-- Add more certificate images as needed -->
   </div>
 </section>
+
+<script>
+// Get elements
+const certBtn = document.querySelector('.cert-btn');
+const certSection = document.getElementById('certificates-section');
+const exitBtn = document.getElementById('cert-exit');
+
+// Show certificates section when button is clicked
+certBtn.addEventListener('click', () => {
+  certSection.style.display = 'block';
+});
+
+// Hide certificates section when exit button is clicked
+exitBtn.addEventListener('click', () => {
+  certSection.style.display = 'none';
+});
+</script>
 
 </body>
 </html>
