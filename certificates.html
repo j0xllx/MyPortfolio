@@ -9,7 +9,7 @@
 body{
     margin:0;
     font-family:Arial, sans-serif;
-    background:#f4f4f4;
+    background:linear-gradient(135deg,#eef2f7,#d9e4f5);
 }
 
 /* Certificate Section */
@@ -19,8 +19,8 @@ body{
     left:0;
     width:100%;
     height:100%;
-    background:white;
-    padding:30px;
+    background:linear-gradient(120deg,#ffffff,#f3f6fb);
+    padding:40px;
     overflow-y:auto;
 }
 
@@ -29,32 +29,55 @@ body{
     position:absolute;
     top:20px;
     right:30px;
-    font-size:28px;
+    font-size:26px;
     border:none;
-    background:none;
+    background:white;
+    width:45px;
+    height:45px;
+    border-radius:50%;
     cursor:pointer;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    transition:all 0.25s ease;
+}
+
+.exit-btn:hover{
+    background:#ff4d4d;
+    color:white;
+    transform:scale(1.1);
 }
 
 /* Title */
 h2{
     text-align:center;
-    margin-bottom:30px;
+    margin-bottom:40px;
+    font-size:32px;
+    letter-spacing:1px;
+    color:#2c3e50;
 }
 
 /* Grid Layout */
 .cert-container{
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(350px,1fr));
-    gap:20px;
+    gap:25px;
+    max-width:1200px;
+    margin:auto;
 }
 
 /* PDF Viewer */
 .cert-container iframe{
     width:100%;
     height:500px;
-    border-radius:10px;
-    border:1px solid #ddd;
-    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    border-radius:12px;
+    border:none;
+    background:white;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-container iframe:hover{
+    transform:translateY(-6px) scale(1.02);
+    box-shadow:0 12px 28px rgba(0,0,0,0.25);
 }
 </style>
 </head>
