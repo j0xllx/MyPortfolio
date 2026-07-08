@@ -931,12 +931,12 @@ footer {
       }
       /* Resume Button */
     .resume-button {
-      font-size:x-small;
+      font-size:1px;
       color: white;
       text-decoration: none; 
       border-radius: 8px;
       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      width: 120px;
+      width: 115px;
       height: 20px;
     }
 
@@ -948,7 +948,7 @@ footer {
       text-decoration: none; 
       border-radius: 8px;
       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      width: 120px;
+      width: 115px;
       height: 20px;
     }
 
