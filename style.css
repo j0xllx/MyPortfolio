@@ -154,7 +154,7 @@ header .container {
     color: #333;
 }
 
-.intro-text .button-container {
+.button-container {
   display: flex;
   gap: 10px; /* space between buttons */
   margin-top: 10px; /* space below text */
@@ -923,6 +923,16 @@ footer {
     
       .intro-text h2 {
         font-size: 22px;
+      }
+      .button-container {
+          display: flex;
+          gap: 10px; /* space between buttons */
+          margin-top: 10px;
+          width: 120px;
+          height: 20px;
+      }
+      .button-container a{
+        font-size: small;
       }
     
       .intro-white {
