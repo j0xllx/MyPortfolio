@@ -46,56 +46,13 @@ header .container {
   color: #681755;
   font-size: 45px;
 }
-.My{
+.My,.Me,.My1,.My2,.My3,.My4,.My5,.Me1{
   color:white;
   padding-right: 5px;
 }
-.Journey{
+.Journey,.About,.Projects,.Services,.Tools,.Skills,.Contact,.Works{
   color:#681755;
 }
-.Me{
-  color:white;
-  padding-left: 5px;
-}
-.About{
-  color:#681755;
-}
-.My1{
-  color:white;
-  padding-right: 5px;
-}
-.Projects{
-  color:#681755;
-}
-.My2{
-  color:white;
-  padding-right: 5px;
-}
-.Services{
-  color:#681755;
-}
-.My3{
-  color:white;
-  padding-right: 5px;
-}
-.Tools{
-  color:#681755;
-}
-.Me1{
-  color:white;
-  padding-right: 5px;
-}
-.Contact{
-  color:#681755;
-}
-.My5{
-  color:white;
-  padding-right: 5px;
-}
-.Works{
-  color:#681755;
-}
-
 
 .typing-text {
   font-size: 30px;
@@ -221,7 +178,7 @@ header .container {
 }
 
 .resume-button:hover {
-  background-color: #4a0f50;
+  background-color: #792482;
   transform: translateY(-2px);
 }
 
@@ -243,7 +200,7 @@ header .container {
 }
 
 .cert-btn:hover {
-  background-color: #4a0f50;
+  background-color: #792482;
   transform: translateY(-2px);
 }
 
@@ -476,14 +433,12 @@ section {
 
   .project:hover {
     transform: translateY(-5px);
-    background-color: #595759;
+    background-color: #302c3f;
   }
   
   .project:hover h3,
   .project:hover p{
     color:#ebe1e7;
-    text-decoration: none;
-    color: inherit;
   }
   
   .project h3 {
@@ -627,7 +582,7 @@ section {
   }
   
   .service-card:hover {
-    background-color: #5b565a;
+    background-color: #4f3a46;
     transform: translateY(-10px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
   }
@@ -653,11 +608,11 @@ section {
     margin-bottom: 20px;
   }
   .service-card:hover h3{
-    color: #f9f5f8;
+    color: #ff6a9e;
   }
   .service-card:hover p,
   .service-card:hover i{
-    color: #c4bac1;
+    color: #f3a6da;
   }
   
 #tools{
@@ -692,6 +647,81 @@ section {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+#skills {
+    position: relative;
+    background-color: #000306;
+    border: 2px solid violet;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.SkillsIntro {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Skills Cards */
+.Skills-list{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    margin-bottom:60px;
+}
+
+.skills{
+    width:300px;
+    background:#b590b7;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+    transition:.3s;
+    text-align:center;
+}
+
+.skills:hover{
+    transform:translateY(-8px);
+    background:#302c3f;
+}
+
+.skills h3{
+    color:#333;
+    margin-bottom:20px;
+    font-size:22px;
+}
+
+.skills:hover h3{
+    color:white;
+}
+
+/* Skill Tags */
+.skill-tags{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+}
+
+.skill-tags span{
+    background:#5d4871;
+    color:white;
+    padding:8px 16px;
+    border-radius:30px;
+    font-size:15px;
+    font-weight:500;
+    transition:.3s;
+    cursor:default;
+}
+
+.skill-tags span:hover{
+    background:white;
+    color:#8A2BE2;
+    transform:scale(1.08);
 }
 
 
@@ -764,7 +794,7 @@ section {
   }
   
   .social-links a:hover {
-    background-color: #8c6caf; /* hover effect */
+    background-color: #403848; /* hover effect */
   }
   
   
@@ -1056,11 +1086,11 @@ footer {
     /* Services, Projects, Tools shared layout for mobile */
     .services-container,
     .project-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-    }
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+  }
   
     .service-card,
     .project {
@@ -1080,6 +1110,75 @@ footer {
       font-size: 14px;
     }
   }
+  /* ==========================
+   Mobile Responsive
+========================== */
+@media screen and (max-width: 768px) {
+
+    #tools {
+        padding: 60px 15px;
+    }
+
+    #tools h2 {
+        font-size: 28px;
+    }
+
+    .ToolsIntro {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        padding: 0 10px;
+    }
+
+    /* Skills */
+    .Skills-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .skills {
+        width: 90%;
+        max-width: 350px;
+        padding: 20px;
+    }
+
+    .skills h3 {
+        font-size: 20px;
+    }
+
+    .skill-tags span {
+        font-size: 14px;
+        padding: 7px 14px;
+    }
+
+    /* Tools */
+    .project-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .project {
+        padding: 15px;
+    }
+
+    .tool-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .project h3 {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    .project p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}
   
   /* Extra small screen fix (below 480px) */
   @media (max-width: 480px) {
