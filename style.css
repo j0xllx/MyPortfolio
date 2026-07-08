@@ -465,7 +465,6 @@ section {
     color: inherit;
   }
   
-  
   .project {
     background-color: #dbc3db;
     width: 280px;
@@ -474,9 +473,17 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
   }
-  
+
   .project:hover {
     transform: translateY(-5px);
+    background-color: #595759;
+  }
+  
+  .project:hover h3,
+  .project:hover p{
+    color:#ebe1e7;
+    text-decoration: none;
+    color: inherit;
   }
   
   .project h3 {
@@ -620,6 +627,7 @@ section {
   }
   
   .service-card:hover {
+    background-color: #5b565a;
     transform: translateY(-10px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
   }
@@ -629,13 +637,11 @@ section {
     height: 60px;
     margin-bottom: 20px;
   }
-  
   .service-card h3 {
     font-size: 22px;
     margin-bottom: 12px;
     color: #333;
   }
-  
   .service-card p {
     font-size: 15px;
     color: #666;
@@ -645,6 +651,13 @@ section {
     font-size: 40px;
     color: #556c85;
     margin-bottom: 20px;
+  }
+  .service-card:hover h3{
+    color: #f9f5f8;
+  }
+  .service-card:hover p,
+  .service-card:hover i{
+    color: #c4bac1;
   }
   
 #tools{
@@ -666,6 +679,10 @@ section {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     padding-bottom: 20px;
+}
+.project-list,
+.project{
+  color:rgb(237, 232, 232);
 }
 .tool-logo {
   width: 60px;       /* Fixed width */
