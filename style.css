@@ -1052,7 +1052,11 @@ footer {
         color: #fefefe;
       }
       .project-preview {
-        max-width: 200px;  /* Make the image even smaller on mobile */
+        max-width: 200px; 
+        display: block;
+        margin: 0 auto;
+        
+        /* Make the image even smaller on mobile */
       }
       /* Responsive Text */
 
