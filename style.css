@@ -911,8 +911,8 @@ footer {
     
       .profile-pic {
         border-radius: 20%;
-        height: 150px;
-        width: 150px;
+        height: 130px;
+        width: 130px;
         border-color: #260520;
       }
     
@@ -929,28 +929,17 @@ footer {
           gap: 10px; /* space between buttons */
           margin-top: 10px;
       }
-      /* Resume Button */
-    .resume-button {
-      font-size:1px;
-      color: white;
-      text-decoration: none; 
-      border-radius: 8px;
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      width: 115px;
-      height: 20px;
-    }
-
-
-    /* Certificate Button */
-    .cert-btn {
-      font-size: smaller;
-      color: white;
-      text-decoration: none; 
-      border-radius: 8px;
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      width: 115px;
-      height: 20px;
-    }
+      .resume-button {
+        width: 115px;
+        height: 20px;
+      }
+      .cert-btn {
+        width: 115px;
+        height: 20px;
+      }
+      .button-container a{
+        font-size: 12px;
+      }
 
     
       .intro-white {
