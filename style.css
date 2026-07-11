@@ -46,11 +46,16 @@ header .container {
   color: #681755;
   font-size: 45px;
 }
-.My,.Me,.My1,.My2,.My3,.My4,.My5,.Me1{
+.My,.Me,.My1,.My2,.My4,.My5,.Me1,.Tools{
   color:white;
   padding-right: 5px;
 }
-.Journey,.About,.Projects,.Services,.Tools,.Skills,.Contact,.Works{
+.Tools,.My3{
+  color:white;
+  padding-right: 5px;
+  font-size: 22px;
+}
+.Journey,.About,.Projects,.Services,.Skills,.Contact,.Works{
   color:#681755;
 }
 
@@ -516,6 +521,7 @@ section {
 }
 
 .work-item:hover {
+  background-color: #260b29;
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(160, 32, 240, 0.4);
 }
